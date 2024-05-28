@@ -1,0 +1,65 @@
+@import "../../style/style.scss";
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: $colorlightGray;
+  color: $colorBorder;
+  font-size: 0.8rem;
+
+  h1 {
+    font-size: 1.1rem;
+    color: $colorGray2;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 2rem;
+
+    .item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    .footer-left {
+      .sns-icons {
+        display: flex;
+        gap: 1.2rem;
+
+        img {
+          width: 0.9rem;
+          height: 0.9rem;
+          object-fit: cover;
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.3);
+          }
+        }
+      }
+    }
+    .center-link {
+      a {
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+    .center-about {
+      @include lg {
+        display: none;
+      }
+    }
+    .footer-right {
+      margin-left: 2.5rem;
+      @include md {
+        margin-left: 0;
+      }
+    }
+  }
+}

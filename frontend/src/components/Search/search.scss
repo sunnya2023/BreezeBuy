@@ -1,0 +1,33 @@
+@import "../../style/style.scss";
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid $colorBorder;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    color: $colorText;
+  }
+  input::placeholder {
+    color: $colorGray;
+  }
+  button {
+    width: 2rem;
+    height: 2rem;
+    .ico-search {
+      width: 1.75rem;
+      height: 1.75rem;
+      color: $colorGray2;
+    }
+  }
+
+  @include md {
+    display: none;
+  }
+}

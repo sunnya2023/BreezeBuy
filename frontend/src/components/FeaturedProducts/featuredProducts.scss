@@ -1,0 +1,11 @@
+.item-list {
+  margin: 6.25rem 10.75rem;
+  h1 {
+    font-size: 1.4rem;
+  }
+  .items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+}
