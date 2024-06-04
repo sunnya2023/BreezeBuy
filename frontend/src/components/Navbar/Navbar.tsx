@@ -12,6 +12,7 @@ const Navbar = () => {
   const [open, setMenuOpen] = useState(false);
   const [user, setUser] = useState(true);
   const [cartOpen, setCartOpen] = useState(false);
+
   return (
     <div className="navbar">
       <div className="navbar-left">
@@ -49,10 +50,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-right">
         <Search />
-        <div className="navbar-icons" onClick={(prev) => setCartOpen(!prev)}>
-          <ShoppingCartOutlinedIcon className="cart" />
+
+        <div className="cart-icons" onClick={() => setCartOpen(!cartOpen)}>
+          <ShoppingCartOutlinedIcon />
           <div className="dot"></div>
         </div>
+
         {user ? (
           <Link to="/profile" className="navbar-icons">
             <AccountCircleOutlinedIcon className="user" />

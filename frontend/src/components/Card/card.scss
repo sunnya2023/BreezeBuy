@@ -1,0 +1,76 @@
+@import "../../style/style.scss";
+
+.wrapper {
+  width: 17.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+
+  .card {
+    // width: 16.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .card-img {
+      width: 100%;
+      height: 18rem;
+      overflow: hidden;
+      position: relative;
+
+      &:hover {
+        .secondImg {
+          z-index: 2;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: #fff;
+        padding: 0.188rem 0.3rem;
+        color: $colorGray2;
+        font-size: 0.75rem;
+        z-index: 4;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+      }
+
+      .mainImg {
+        z-index: 1;
+      }
+    }
+    .price-info {
+      .price {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      span {
+        color: $colorGray2;
+      }
+    }
+  }
+
+  button {
+    width: max-content;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid $colorRed;
+    border-radius: 1.5rem;
+    color: $colorRed;
+    font-size: 0.75rem;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@import "../../style//style.scss";
+
+.product {
+  padding: 1.25rem 3.125rem;
+  display: flex;
+  gap: 3.125rem;
+
+  .left {
+    flex: 1;
+    display: flex;
+    gap: 1.25rem;
+
+    .images {
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: 9.375rem;
+        object-fit: cover;
+        cursor: pointer;
+        margin-bottom: 1.25rem;
+      }
+    }
+    .mainImg {
+      flex: 5;
+
+      img {
+        width: 100%;
+        max-height: 50rem;
+        object-fit: cover;
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    .price {
+      font-size: 1.875rem;
+      color: $colorBlue;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 300;
+      text-align: justify;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      button {
+        width: 3.125rem;
+        height: 3.125rem;
+        font-size: 1.75rem;
+        font-weight: 300;
+      }
+    }
+
+    .add {
+      width: 100%;
+      padding: 0.625rem;
+      background: $colorBlue;
+      color: $colorWhite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      font-weight: 500;
+    }
+
+    .link {
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        color: $colorBlue;
+        font-size: 0.875rem;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      font-size: 0.875rem;
+      color: $colorGray2;
+      margin-top: 1rem;
+
+      hr {
+        border: 1px solid $colorGraySoft;
+      }
+    }
+  }
+}

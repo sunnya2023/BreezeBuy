@@ -1,5 +1,6 @@
 import Card from "../Card/Card";
-import "./featuredProducts.scss";
+import "./list.scss";
+
 export interface IitemProps {
   id: number;
   img: string;
@@ -10,7 +11,7 @@ export interface IitemProps {
   isNew: boolean;
 }
 
-const FeaturedProduct = ({ type }) => {
+const List = () => {
   const data: IitemProps[] = [
     {
       id: 1,
@@ -48,18 +49,51 @@ const FeaturedProduct = ({ type }) => {
       des: "Lorem ipsum dolor sit",
       isNew: false,
     },
+    {
+      id: 5,
+      img: "https://cdn.pixabay.com/photo/2016/11/21/16/01/woman-1846127_640.jpg",
+      img2: "https://cdn.pixabay.com/photo/2016/10/07/08/56/woman-1721065_640.jpg",
+      title: "HAT",
+      price: 8,
+      des: "Lorem ipsum dolor sit",
+      isNew: false,
+    },
+    {
+      id: 6,
+      img: "https://cdn.pixabay.com/photo/2016/11/21/16/01/woman-1846127_640.jpg",
+      img2: "https://cdn.pixabay.com/photo/2016/10/07/08/56/woman-1721065_640.jpg",
+      title: "HAT",
+      price: 8,
+      des: "Lorem ipsum dolor sit",
+      isNew: false,
+    },
+    {
+      id: 7,
+      img: "https://cdn.pixabay.com/photo/2016/11/21/16/01/woman-1846127_640.jpg",
+      img2: "https://cdn.pixabay.com/photo/2016/10/07/08/56/woman-1721065_640.jpg",
+      title: "HAT",
+      price: 8,
+      des: "Lorem ipsum dolor sit",
+      isNew: false,
+    },
+    {
+      id: 8,
+      img: "https://cdn.pixabay.com/photo/2016/11/21/16/01/woman-1846127_640.jpg",
+      img2: "https://cdn.pixabay.com/photo/2016/10/07/08/56/woman-1721065_640.jpg",
+      title: "HAT",
+      price: 8,
+      des: "Lorem ipsum dolor sit",
+      isNew: false,
+    },
   ];
 
   return (
-    <div className="item-list">
-      <h1>{type}</h1>
-      <div className="items">
-        {data.map((item) => (
-          <Card item={item} key={item.id} />
-        ))}
-      </div>
+    <div className="list">
+      {data.map((item) => (
+        <Card item={item} key={item.id} />
+      ))}
     </div>
   );
 };
 
-export default FeaturedProduct;
+export default List;
